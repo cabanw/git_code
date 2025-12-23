@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>🌐 World Clock</title>
+
+<style>
+    body {
+        background: #0f172a;
+        color: #e5e7eb;
+        font-family: "Segoe UI", Arial, sans-serif;
+        padding: 20px;
+    }
+
+    h2 {
+        margin-bottom: 20px;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 16px;
+    }
+
+    .card {
+        background: #020617;
+        border-radius: 12px;
+        padding: 16px;
+        box-shadow: 0 10px 20px rgba(0,0,0,.4);
+        text-align: center;
+    }
+
+    .city {
+        font-size: 18px;
+        margin-bottom: 10px;
+        font-weight: 600;
+    }
+
+    .time {
+        font-size: 26px;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+
+    .date {
+        font-size: 14px;
+        opacity: 0.7;
+        margin-top: 6px;
+    }
+</style>
+</head>
+
+<body>
+<h2>🌐 World Clock</h2>
+
+<div id="clockGrid" class="grid"></div>
+
+<script>
+async function updateClock() {
+    const res = await fetch("/time");
+    const data = await res.json();
+
+    const grid = document.getElementById("clockGrid");
+    grid.innerHTML = "";
+
+    for (const city in data) {
+        const [date, time] = data[city].split(" ");
+
+        grid.innerHTML += `
+            <div class="card">
+                <div class="city">${city}</div>
+                <div class="time">${time}</div>
+                <div class="date">${date}</div>
+            </div>
+        `;
+    }
+}
+
+updateClock();
+setInterval(updateClock, 1000);
+</script>
+</body>
+</html>
