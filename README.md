@@ -1,82 +1,64 @@
-🌐 **WordClock**
+# 🌐 WordClock
 
-WordClock is a lightweight world clock web application built with Python (Flask) and a modern HTML/CSS/JavaScript frontend.
-It displays real-time clocks for multiple cities/time zones using Python’s built-in zoneinfo module.
+**WordClock** is a lightweight world clock web application built with **Python (Flask)** and a modern **HTML/CSS/JavaScript** frontend.  
+It displays real-time clocks for multiple cities and time zones using Python’s built-in **`zoneinfo`** module for accurate DST handling.
 
-Perfect for:
+Ideal for:
+- 🌍 Remote teams
+- 🏢 Global operations
+- 📊 Personal productivity dashboards
+- 📚 Learning Flask + frontend integration
 
-Remote teams
+---
 
-Global operations
+## ✨ Features
 
-Personal productivity dashboards
+- ⏰ Real-time clocks (updates every second)
+- 🌍 Multiple time zones
+- 🧩 Card-style clock widgets
+- 🎨 Modern, responsive UI
+- ⚡ Lightweight Flask backend
+- 🕒 Accurate DST handling via `zoneinfo`
+- 💻 Runs locally in any modern browser
 
-Learning Flask + frontend integration
+---
 
-✨ **Features**
+## 🛠️ Tech Stack
 
-⏰ Real-time clocks (updates every second)
+**Backend**
+- Python 3.9+
+- Flask
 
-🌍 Multiple time zones
+**Frontend**
+- HTML
+- CSS
+- JavaScript
 
-🧩 Card-style clock widgets
+**Time Zones**
+- `zoneinfo` (IANA Time Zone Database)
 
-🎨 Modern, responsive UI
+---
 
-⚡ Lightweight Flask backend
+## 🌍 Supported Time Zones (Default)
 
-🕒 Accurate DST handling (zoneinfo)
+- 🇺🇸 US East — New York
+- 🇺🇸 US Central — Chicago
+- 🇺🇸 US West — Los Angeles
+- 🇵🇷 Puerto Rico
+- 🇪🇸 Spain — Madrid
 
-💻**Runs locally in any modern browser**
+> You can easily add or remove cities in `WordClock.py`.
 
+---
 
-🛠️ Tech Stack
+## 🔧 Customization
 
-Backend: Python 3.9+, Flask
-🌍 **Supported Time Zones (Default)**
+### ➕ Add a New City
 
-US East (New York)
+Edit the `cities` dictionary in `WordClock.py`:
 
-US Central (Chicago)
-
-US West (Los Angeles)
-
-Puerto Rico
-
-Spain (Madrid)
-
-**You can add or remove cities easily in WordClock.py.**
-🔧 Customization
-Add a New City
-
-Edit the cities dictionary in WordClock.py:
-
+```python
 cities = {
     "Japan": "Asia/Tokyo",
     "UK": "Europe/London"
 }
-
-🔐 **Development Notes**
-
-This uses Flask’s development server
-
-Not intended for production without a WSGI server (e.g. Gunicorn, uWSGI)
-
-Debug mode can be disabled in production
-Frontend: HTML, CSS, JavaScript
-
-Time Zones: zoneinfo (IANA Time Zone Database)
-
-🚧 **Future Enhancements**
-
-⏳ 12h / 24h toggle
-
-🕰️ Analog clock widgets
-
-➕ UI-based city selector
-
-🖥 Desktop widget (.exe)
-
-🌙 Dark/light theme toggle
-
-💾 Save user preferences
