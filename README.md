@@ -13,7 +13,7 @@ Personal productivity dashboards
 
 Learning Flask + frontend integration
 
-✨ Features
+✨ **Features**
 
 ⏰ Real-time clocks (updates every second)
 
@@ -27,8 +27,9 @@ Learning Flask + frontend integration
 
 🕒 Accurate DST handling (zoneinfo)
 
-**💻 Runs locally in any modern browser
-**
+💻**Runs locally in any modern browser**
+
+
 🛠️ Tech Stack
 
 Backend: Python 3.9+, Flask
@@ -55,7 +56,7 @@ cities = {
     "UK": "Europe/London"
 }
 
-🔐** Development Notes**
+🔐 **Development Notes**
 
 This uses Flask’s development server
 
@@ -66,7 +67,7 @@ Frontend: HTML, CSS, JavaScript
 
 Time Zones: zoneinfo (IANA Time Zone Database)
 
-🚧 Future Enhancements
+🚧 **Future Enhancements**
 
 ⏳ 12h / 24h toggle
 
